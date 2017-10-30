@@ -1,6 +1,6 @@
 from warnings import warn
 
-__doc = \
+__doc__ = \
 """
 Easy-to-use and robust event system.
 """
@@ -44,7 +44,8 @@ class EventController:
             warn(NoHandlerAttachedWarning)
         self.queue.append(Event(eventtype, attrs))
 
-def attach_handler(handler, eventtype):
+def attach_handler(controller, eventtype):
     def wrap(func):
-        handler.attach_handler(func, eventtype)
+        controller.attach_handler(func, eventtype)
+        return func
     return wrap
