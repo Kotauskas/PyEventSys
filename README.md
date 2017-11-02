@@ -5,6 +5,7 @@ Easy-to-use and robust event system. Compatible with Python 3.5 (guaranteed), an
 Download this repo as ZIP and extract the `eventsys.py` file to `<Python installdir>/Lib/site-packages`. No additional steps are required. Too easy to make a `setup.py`.
 
 ## API
+------------------------
 class `EventController`  
   The event controller. Create one to start actually using this event system.  
   
