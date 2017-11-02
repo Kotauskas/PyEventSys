@@ -9,10 +9,12 @@ class `EventController`
   The event controller. Create one to start actually using this event system.  
   
   `attach_handler(func, eventtype)`  
-    Attach a handler to the specified event. func is the handler. eventtype is the evet type name (string). Warns with HandlerAlreadyAttachedWarning if the specified event already has a handler.  
+    Attach a handler to the specified event. func is the handler. eventtype is the event type name (string). Warns with HandlerAlreadyAttachedWarning if the specified event already has a handler.  
     
   `create_event(eventtype, \*args)`  
     Add event of type eventtype and arguments \*args to the event queue.  
+
+-------------------------
 
 decorator `attach_handler(controller, eventtype)`  
   A decorator for attaching handlers on fly. controller is the controller to attach the function to. eventtype is the same as for `EventController.attach_handler` and the warning is also applied. ***NOTE:*** The function does NOT "survive" after decorating so it will become None if it is applied with the `@` decorating syntax.
